@@ -42,9 +42,7 @@ export class MetaService {
       {name: 'twitter:url', content: this.rootUrl},
       {name: 'twitter:title', content: title},
       {name: 'twitter:description', content: description},
-      {name: 'twitter:image', content: image || this.defaultImage},
-      {name: 'twitter:site', content: '@marckevinflores'},
-      {name: 'twitter:creator', content: '@marckevinflores'},
+      {name: 'twitter:image', content: image || this.defaultImage}
     ])
   }
 }
