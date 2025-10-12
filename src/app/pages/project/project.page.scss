@@ -1,0 +1,242 @@
+.game-design-portfolio {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+}
+
+.portfolio-section {
+  margin-bottom: 4rem;
+
+  .section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 2.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+
+    .title-container {
+      .section-category {
+        font-size: 1.75rem; // Reduzido de 2.5rem
+        font-weight: 800;   // Reduzido de 900
+        color: #fff;
+        letter-spacing: 2px; // Reduzido de 3px
+        text-transform: uppercase;
+        margin: 0;
+        line-height: 1.2;
+      }
+
+      .title-line {
+        width: 60px; // Reduzido de 80px
+        height: 3px; // Reduzido de 4px
+        background: linear-gradient(90deg, #6366f1, #8b5cf6);
+        margin: 0.75rem 0; // Reduzido de 1rem
+        border-radius: 2px;
+      }
+
+      .section-subtitle {
+        font-size: 0.95rem; // Reduzido de 1.1rem
+        color: #94a3b8;
+        font-weight: 500;
+        text-transform: uppercase;
+        letter-spacing: 0.5px; // Reduzido de 1px
+        margin: 0;
+      }
+    }
+  }
+}
+
+.view-all-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+  color: white;
+  border: none;
+  padding: 0.6rem 1.25rem; // Reduzido ligeiramente
+  border-radius: 6px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-size: 0.85rem; // Reduzido de 0.9rem
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(99, 102, 241, 0.4); // Reduzido
+  }
+
+  .btn-icon {
+    width: 14px; // Reduzido
+    height: 14px;
+  }
+}
+
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem; // Reduzido de 2rem
+}
+
+.game-card {
+  position: relative;
+  border-radius: 10px; // Reduzido de 12px
+  overflow: hidden;
+  aspect-ratio: 4/3;
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25); // Reduzido
+
+  &:hover {
+    transform: translateY(-6px); // Reduzido de 8px
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4); // Reduzido
+
+    .card-overlay {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .card-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+
+  .card-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.9));
+    padding: 1.5rem 1.25rem 1.25rem; // Reduzido
+    color: white;
+    opacity: 0;
+    transform: translateY(15px); // Reduzido
+    transition: all 0.3s ease;
+
+    .card-title {
+      font-size: 1.1rem; // Reduzido de 1.3rem
+      font-weight: 700;
+      margin: 0 0 0.25rem 0; // Reduzido
+      text-transform: uppercase;
+      letter-spacing: 0.5px; // Reduzido
+    }
+
+    .card-role {
+      font-size: 0.8rem; // Reduzido de 0.9rem
+      color: #94a3b8;
+      margin: 0;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.3px; // Reduzido
+    }
+  }
+}
+
+// Cores temáticas para cada seção (mantidas)
+.digital-arts {
+  .section-category {
+    background: linear-gradient(135deg, #6366f1, #8b5cf6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+}
+
+.pixel-arts {
+  .section-category {
+    background: linear-gradient(135deg, #10b981, #059669);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+}
+
+.models-3d {
+  .section-category {
+    background: linear-gradient(135deg, #f59e0b, #d97706);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+}
+
+.traditional-arts {
+  .section-category {
+    background: linear-gradient(135deg, #ef4444, #dc2626);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+}
+
+// Responsividade
+@media (max-width: 768px) {
+  .game-design-portfolio {
+    padding: 1.5rem 1rem;
+  }
+
+  .portfolio-section {
+    margin-bottom: 3rem;
+
+    .section-header {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 1rem;
+      margin-bottom: 2rem;
+
+      .title-container {
+        .section-category {
+          font-size: 1.5rem; // Ajustado para mobile
+          letter-spacing: 1.5px;
+        }
+
+        .title-line {
+          width: 50px;
+          margin: 0.5rem 0;
+        }
+
+        .section-subtitle {
+          font-size: 0.9rem;
+        }
+      }
+    }
+  }
+
+  .view-all-btn {
+    align-self: flex-end;
+  }
+
+  .cards-grid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  .game-card {
+    .card-overlay {
+      padding: 1.25rem 1rem 1rem;
+      
+      .card-title {
+        font-size: 1rem;
+      }
+      
+      .card-role {
+        font-size: 0.75rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .portfolio-section {
+    .section-header {
+      .title-container {
+        .section-category {
+          font-size: 1.25rem;
+        }
+      }
+    }
+  }
+}

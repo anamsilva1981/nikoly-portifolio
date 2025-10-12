@@ -1,0 +1,117 @@
+<h1
+  class="text-brand-primary mt-2 text-center text-3xl font-semibold tracking-tight lg:text-4xl lg:leading-snug dark:text-white">
+  Projetos
+</h1>
+
+<feature-project/>
+
+<!-- Seção de Portfolio de Game Design -->
+<div class="game-design-portfolio">
+  
+  <!-- Divisória 1: Artes Digitais -->
+  <section class="portfolio-section digital-arts">
+    <div class="section-header">
+      <div class="title-container">
+        <h2 class="section-category">ARTES DIGITAIS</h2>
+        <div class="title-line"></div>
+        <h3 class="section-subtitle">CONCEPT ART & ILUSTRAÇÕES</h3>
+      </div>
+      <button class="view-all-btn" routerLink="/portfolio/digital-arts">
+        VER TODAS
+        <svg class="btn-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+        </svg>
+      </button>
+    </div>
+    <div class="cards-grid">
+      <div class="game-card" *ngFor="let art of digitalArts">
+        <img [src]="art.image" [alt]="art.title" class="card-image">
+        <div class="card-overlay">
+          <h4 class="card-title">{{art.title}}</h4>
+          <p class="card-role">{{art.role}}</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Divisória 2: Pixel Art -->
+  <section class="portfolio-section pixel-arts">
+    <div class="section-header">
+      <div class="title-container">
+        <h2 class="section-category">PIXEL ART</h2>
+        <div class="title-line"></div>
+        <h3 class="section-subtitle">SPRITES & ANIMAÇÕES</h3>
+      </div>
+      <button class="view-all-btn" routerLink="/portfolio/pixel-arts">
+        VER TODAS
+        <svg class="btn-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+        </svg>
+      </button>
+    </div>
+    <div class="cards-grid">
+      <div class="game-card" *ngFor="let pixel of pixelArts">
+        <img [src]="pixel.image" [alt]="pixel.title" class="card-image">
+        <div class="card-overlay">
+          <h4 class="card-title">{{pixel.title}}</h4>
+          <p class="card-role">{{pixel.role}}</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Divisória 3: Modelos 3D -->
+  <section class="portfolio-section models-3d">
+    <div class="section-header">
+      <div class="title-container">
+        <h2 class="section-category">MODELOS 3D</h2>
+        <div class="title-line"></div>
+        <h3 class="section-subtitle">MODELAGEM & RENDER</h3>
+      </div>
+      <button class="view-all-btn" routerLink="/portfolio/3d-models">
+        VER TODAS
+        <svg class="btn-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+        </svg>
+      </button>
+    </div>
+    <div class="cards-grid">
+      <div class="game-card" *ngFor="let model of threeDModels">
+        <img [src]="model.image" [alt]="model.title" class="card-image">
+        <div class="card-overlay">
+          <h4 class="card-title">{{model.title}}</h4>
+          <p class="card-role">{{model.role}}</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Divisória 4: Arte Tradicional -->
+  <section class="portfolio-section traditional-arts">
+    <div class="section-header">
+      <div class="title-container">
+        <h2 class="section-category">ARTE TRADICIONAL</h2>
+        <div class="title-line"></div>
+        <h3 class="section-subtitle">DESENHOS & PINTURAS</h3>
+      </div>
+      <button class="view-all-btn" routerLink="/portfolio/traditional-arts">
+        VER TODAS
+        <svg class="btn-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+        </svg>
+      </button>
+    </div>
+    <div class="cards-grid">
+      <div class="game-card" *ngFor="let traditional of traditionalArts">
+        <img [src]="traditional.image" [alt]="traditional.title" class="card-image">
+        <div class="card-overlay">
+          <h4 class="card-title">{{traditional.title}}</h4>
+          <p class="card-role">{{traditional.role}}</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<other-project/>
