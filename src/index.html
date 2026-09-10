@@ -11,6 +11,20 @@
   <meta property="og:description" content="Character Design · Illustration · Visual Identity">
   <meta property="og:type" content="website">
   <link rel="icon" type="image/x-icon" href="./assets/icons/favicon-light.png">
+  <style>
+    body { overflow-x: hidden; }
+    .site-shell { overflow: visible !important; }
+    .topbar {
+      position: sticky !important;
+      top: 0;
+      z-index: 1000 !important;
+      box-shadow: 0 8px 28px rgba(25, 23, 21, 0.06);
+    }
+    #home, #work, #about, #contact { scroll-margin-top: 96px; }
+    @media (max-width: 650px) {
+      #home, #work, #about, #contact { scroll-margin-top: 84px; }
+    }
+  </style>
   <script src="assets/navigation.js" defer></script>
 </head>
 <body>
