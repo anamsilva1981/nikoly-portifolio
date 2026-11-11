@@ -1,0 +1,12 @@
+{
+  "fileKey": "Um7naeQlBxH9UpqHaDyCU2",
+  "exports": {
+    "login": "131:260",
+    "cadastro": "146:548",
+    "cadastro-detalhes": "175:901",
+    "admin-membros": "37:237",
+    "admin-financeiro": "38:279",
+    "admin-sessao": "39:303"
+  },
+  "notes": "Exports of existing Figma nodes; context-menu and Petshop screenshots are not used. Administrative nodes are raster references stored in Figma, exported individually."
+}
