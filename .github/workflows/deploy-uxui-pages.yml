@@ -21,7 +21,7 @@ jobs:
       - name: Prepare static portfolio
         run: |
           mkdir -p _site
-          cp src/assets/portfolio-design/index.html _site/index.html
+          cp -R src/assets/portfolio-design/. _site/
           touch _site/.nojekyll
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
